@@ -1,0 +1,458 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+input{
+    display: none;
+}
+.x1,.x2{
+    display: none;
+}
+body{
+
+    width:100%;
+    height:100%;
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    overflow: scroll;
+    overflow-x: hidden;
+    position:relative;  
+    background-color: rgb(255, 225, 186);
+    overflow: hidden;
+    background-image: url('women2.jpg');
+    background-size:50% 100vh;
+    background-repeat: no-repeat;
+}
+.container{
+    display: grid;
+    grid-gap: 8px;
+    grid-template-areas:
+    'navbar navbar navbar navbar'
+    'logo logo logo logo'
+    'text text text text'
+    'social social social social '
+    ;
+    background-color: rgb(255, 255, 255);
+    width: 49%;
+    height: 100vh;
+    position: relative;
+    left: 50%;
+    overflow: hidden;
+}
+.items{
+    width: 49%;
+    /* border: 2px solid black; */
+    /* background-color: rgb(189, 218, 255); */
+    position: relative;
+    left: 0%;
+    margin: 10px 10px;
+    width: 97.5%;
+}
+
+#navbar{grid-area: navbar;
+    height: 60px;
+}
+#logo{grid-area: logo;
+    height: 140px;
+    bottom: 20px;
+    box-sizing: border-box;
+}
+#text{grid-area: text;
+    height: 400px;
+    bottom: 40px;
+    box-sizing: border-box;
+}
+#social{grid-area: social;
+    height: 80px;
+    bottom: 40px;
+}
+
+/* ---------------------------------------*/
+
+
+#navbar ul{
+    display: flex;
+    justify-content: center;
+}
+
+#navbar ul li {
+    padding: 17px 50px;
+    list-style:none;
+}
+
+#navbar ul li a{
+    position: relative;
+    text-decoration: none;
+    color:rgb(121, 78, 22);
+    font-family: fantasy;
+    letter-spacing: 2px;
+    font-size: 18px;
+    padding: 0px 8px;
+}
+#navbar ul li a:hover{
+    color: black;
+}
+#navbar ul li a:before{
+    content: "";
+    position: absolute;
+    top: -20%;
+    left: 0%;
+    width: 0%;
+    height: 0px ;
+    border-bottom: 30px solid rgb(223, 175, 112);
+    transition: all 0.3s;
+    opacity: 0.4;
+}
+#navbar ul li a:hover:before{
+    width: 100%;
+    
+    border-radius: 50px;
+}
+
+#logo img{
+    width: 100px;
+    position: absolute;
+    top: 0%;
+    left: 43%;
+}
+#logo p{
+    position: relative;
+    top: 75%;
+    left: 40%;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:rgb(121, 78, 22);
+}
+#text p{
+    text-align: center;
+    color:rgb(121, 78, 22);
+    font-size: 80px;
+    font-weight: 600;
+}
+#text span{
+    color: rgb(223, 175, 112);
+}
+#text .btn{
+    text-align: center;
+    position: relative;
+    left: 23%;
+    padding: 10px 15px;
+    margin-top: 30px;
+    margin: 20px;
+    width: 150px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#text #button1{
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    border: 3px solid rgb(121, 78, 22);
+    transition: all 0.3s;
+}
+#text #button1:hover{
+    transform:translateY(-3px);
+    background-color:  rgb(121, 78, 22);
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+#text #button2 {
+    color: white;
+    background-color: rgb(121, 78, 22);
+    border-radius: 20px;
+    border: 3px solid rgb(121, 78, 22);
+    transition: all 0.3s;
+}
+#text #button2 a{
+    text-decoration: none;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+#text #button2:hover{
+    transform:translateY(-3px);
+    background-color:rgb(224, 185, 153);
+}
+#text #para{
+    width: 690px;
+    font-size: 15px;
+    position: relative;
+    left: 20px;
+    top: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#text h3{
+    color: rgb(190, 112, 48);
+    text-align: center;
+    margin-top: 60px;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+
+#social{
+    position: absolute;
+    right: 5%;
+    bottom:12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -px;
+}
+#social a{
+    width: 40px;
+    display: flex;
+    font-size: 28px;
+    cursor: pointer;
+    transition: all 0.2s;
+    padding: 7px 50px;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(141, 67, 67);
+    
+}
+#social a:hover{
+    transform: translateY(-4px);
+    color: blue;
+}
+img{
+    width: 100px;
+    position: relative;
+    left: -90px;
+    z-index:1;
+}
+
+
+
+
+
+/* ///////////////////////////////////// */
+
+@media (min-width:350px) and (max-width:420px){
+    .x1,.x2{
+        display: block;
+        color: rgb(126, 82, 33);
+    }
+    .x1{
+        z-index: 6;
+        position: absolute;
+        top: 30px;
+        /* bottom:795px; */
+        left: 30px;
+        font-size: 28px;
+        opacity: 1;
+        z-index: 2;
+    }
+    .x2{
+        z-index: 6;
+        position: absolute;
+        top: 30px;
+        /* bottom:795px; */
+        left: 30px;
+        font-size: 28px;
+        opacity: 0;
+        z-index: 2;
+    }
+    #box:checked ~ .x2{
+        opacity: 1;
+
+    }
+    #box:checked ~ .x1{
+        opacity: 0;
+
+    }
+    input{
+        /* display: none; */
+    }
+    html,body{
+
+        width:100%;
+        height:100vh;
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        position:relative;  
+        background-color:none;
+        
+    }
+    
+    .container{
+        display: grid;
+        grid-gap: 8px;
+        grid-template-areas:
+        'navbar navbar navbar navbar'
+        'logo logo logo logo'
+        'text text text text'
+        'social social social social '
+        ;
+        /* background-color: rgb(255, 255, 255); */
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        left: 0%;
+        overflow-y: scroll;
+        
+       
+
+    }
+    .items{
+        width: 100%;
+        /* border: 2px solid black; */
+        /* background-color: rgb(189, 218, 255); */
+        position: relative;
+        left: 0%;
+        margin: 0px 0px;
+        width: 100%;
+    }
+    
+    #navbar{grid-area: navbar;
+        height: 0px;
+        transition: all 0.3s;
+        opacity: 0;
+        background-color: rgb(196, 171, 139);
+    }
+    #box:checked ~ #navbar{
+        height: 280px;
+        opacity: 1;
+
+    }
+    #logo{grid-area: logo;
+        height: 140px;
+        bottom: 20px;
+        box-sizing: border-box;
+        
+    }
+    #text{grid-area: text;
+        height: 450px;
+        bottom: 30px;
+        box-sizing: border-box;
+       
+    }
+    #social{grid-area: social;
+        height: 380px;
+        bottom: -380px;
+        /* border: 2px solid black; */
+        background-image: url('family.jpg');
+        background-size: 100% 300px;
+        background-repeat: no-repeat;
+       
+    }
+   
+    #navbar ul{
+        display: block;
+        justify-content: flex-start;
+        text-align: center;
+        margin-left: 0px;
+        margin-top: 5px;
+        
+
+    }
+    
+    #navbar ul li {
+        padding: 20px 0px;
+        list-style:none;
+    }
+    
+    #navbar ul li a{
+        position: relative;
+        text-decoration: none;
+        color:rgb(121, 78, 22);
+        font-family: fantasy;
+        letter-spacing: 2px;
+        font-size: 18px;
+        padding: 7px 10px;
+
+    }
+    #logo img{
+        width: 100px;
+        position: absolute;
+        top: 40px;
+        left: 39%;
+        
+    }
+    #logo p{
+        position: relative;
+        top: 150px;
+        left: 35%;
+        font-size: 30px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color:rgb(121, 78, 22);
+        
+    }
+    #text p{
+        position: relative;
+        top: 80px;
+        /* left: -200px; */
+        text-align: center;
+        color:rgb(121, 78, 22);
+        font-size: 50px;
+        font-weight: 600;
+    }
+    #text span{
+        color: rgb(223, 175, 112);
+    }
+    #text .btn{
+        text-align: center;
+        position: relative;
+        top: 140px;
+        left: 3%;
+        padding: 10px 15px;
+        margin-top: 30px;
+        margin: 20px;
+        width: 150px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #text #button2 {
+        color: white;
+        background-color: rgb(121, 78, 22);
+        border-radius: 20px;
+        border: 3px solid rgb(121, 78, 22);
+        transition: all 0.3s;
+    }
+    #text #button2 a{
+        text-decoration: none;
+        color: white;
+        text-shadow: 2px 2px 2px black;
+    }
+    #text #button2:hover{
+        transform:translateY(-3px);
+        background-color:rgb(97, 69, 47);
+    }
+    
+    #text #para{
+        width: 380px;
+        font-size: 15px;
+        position: relative;
+        left: 10px;
+        top: 150px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+    }
+    #text h3{
+        text-align: center;
+        margin-top: 177px;
+    }
+    #social a:hover{
+        transform: translateY(-4px);
+        color: rgb(196, 171, 139);
+    }
+   
+    #social a{
+        width: 40px;
+        display: flex;
+        font-size: 28px;
+        cursor: pointer;
+        transition: all 0.2s;
+        padding: 7px 50px;
+        text-align: center;
+        text-decoration: none;
+        color: rgb(141, 67, 67);
+        position: relative;
+        top: 140px;
+        
+    }
+}
